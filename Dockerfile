@@ -6,6 +6,7 @@ Label org.opencontainers.image.authors="mail@gmail.com" \
 Maintainer mail@gmail.com
 Run mkdir test # Add the test folder in /
 Workdir $pp 
-Run apt update && apt install tmux zsh -y && mkdir test # Add the test folder in the working directory
+Run apt update && apt install -y tmux \ 
+  zsh && mkdir test # Add the test folder in the working directory
 CMD ["ls", "/etc"] # List /etc and quit
 
